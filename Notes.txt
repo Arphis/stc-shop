@@ -1,0 +1,82 @@
+
+Problem 1: mongodb server wont connect: just start the server in services.msc
+Problem 2: p element is fine all the others are moving
+Solution: Use flexbox and put the elements inside div. Use flexbox with position relative.
+Problem 3: product images are not the same size.
+Solution: get new imgs and make them the same size
+Problem 4: cant delete products as admin. Server error(csrf token)
+Solution: change const response = await fetch('/admin/products/' + productId + '?_csrf' + csrfToken, {
+        method: 'DELETE'//we can use this feature to send delete request 
+    })
+'?_csrf' to '?_csrf='
+Problem 5: whenever I update orders the status switches back when I refresh the pafe.
+Solution: add order update
+Problem 5: I cant make it responsive cause the menu is too wode and the cover menu does not appear.
+Solution: implemented min width and max width separately
+ PROBLEM 6:
+
+
+Sort products by type:
+Well first I need to assign the type to products.
+Then I need a json request or a function
+task 1: get the type data from frontend
+
+
+      let nootropicProducts = products.filter(product => product.type === 'Nootropic/Psychotropic');
+      
+      nootropicProducts.forEach(product => {  %>  <ul id="product-grid">
+   
+        <li>
+           <%- include('../../shared/includes/product-item', {product:product}) %>
+        </li>
+    <%  }) %>
+
+Tried rendering in ejs, I could not get the value of selected option.
+   <% products.forEach(product => { %>
+    <% if( product.type == 'Fatburners') { %>
+       <ul id="product-grid">
+    <h1><%=product.type%></h1>
+     
+          <li>
+             <%- include('../../shared/includes/product-item', {product:product}) %>
+          </li>
+        
+    
+    </ul> 
+
+  <% } else { %>
+
+
+
+
+I need to figure out how to get the selected type value and then render content. Problem is I have to use ejs.
+There is DOM manipulation option.
+Didn't work cause I cant use EJS in js.
+
+  Dom doesnt work because i change route with GET command and then I need to render the new list of products thats the only way.
+I got IT: I had to render separate page for each type
+Problem: if i put my sorting function on route it works but then I cant access cart
+Solution: I switched to different route path, like product/cart instead of products/cart since i had dynamic paths in products/:id
+I also changed form actions to :type dynamic path since that is what I set in my router.
+  
+I implemented the sortProducts function and then got access to product type with req.query and passed it in that function, then sorted products by type on frontend via ejs products.forEach
+
+
+
+Problem 7: Not autharized and cant see my orders when logged in.
+Solution: added and edited protectedroutes middleware.
+
+
+Problem 8: Input and button dont align
+Solution: set vertical-align:bottom and fix size.
+
+
+
+
+
+
+
+
+
+
+ 

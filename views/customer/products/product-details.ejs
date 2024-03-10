@@ -1,0 +1,39 @@
+<%- include('../../shared/includes/head', {pageTitle: product.Title}) %>
+<link rel="stylesheet" href="/styles/products-shop.css">
+<script src="/scripts/cart-management.js" defer></script>
+</head>
+<body>
+   <%- include('../../shared/includes/header') %>
+
+ 
+<main id = "product-details">
+   <header>
+      
+      <div >
+       <h1><%= product.title %></h1>
+      <img class="product-details-main-img" src="<%= product.imageUrl %>" alt="<%= product.title %>">
+    
+   </div>
+
+      <div id = "product-info">
+         <p  id = "product-description"><%= product.description %></p>
+    
+        <div class = "price-cart-flex">
+         <p id = "price">Price:$<%= product.price %></p>
+
+
+         <button class = "add-to-cart-btn" data-productid="<%= product.id %>" data-csrf = "<%= locals.csrfToken %>">Add to Cart</button>
+        </div> 
+      </div>
+  
+   </header>
+
+
+
+ 
+   
+
+
+
+</main>
+    <%- include('../../shared/includes/footer' ) %>

@@ -1,0 +1,191 @@
+
+
+<h1 id = "trending">Trending Products</h1>
+<section class = "swiper-section">
+  
+
+   
+
+
+   <ul class = "container">
+
+      
+
+ <li class = "content">
+         <div class="product-card">
+            <div class="product-item">
+       <img src="<%= msm.imageUrl %>" alt="<%= msm.title %>" class = "product-image" draggable = "false"/>
+       <div class="product-item-content">
+         <h2 class = "product-title"><%= msm.title %></h2>
+         <div class="product-item-actions">
+             <% if (locals.isAdmin) { %>
+                 <a class="btn" href="/admin/products/<%= msm.id %>">View and Edit</a>
+                 <div class="divider">
+                     <button
+                     class="btn btn-alt"
+                     data-productid="<%=msm.id %>"
+                     data-csrf="<%=locals.csrfToken %>"
+                     >
+                     Delete
+             </button>
+             <% } else { %>
+                 <a class= "btn btn-alt" href="/products/<%= msm.id %>">View Details</a>
+                 <% } %>
+             </div>
+         </div>
+     </div>
+ </div>
+ </div>
+</li>
+
+
+<li class = "content">
+<div class = "product-card" >
+    <div class="product-item">
+       <img src="<%= brainSupport.imageUrl %>" alt="<%= brainSupport.title %>" class = "product-image" draggable = "false"/>
+       <div class="product-item-content">
+          <h2 class = "product-title"><%= brainSupport.title %></h2>
+      <div class="product-item-actions">
+         <% if (locals.isAdmin) { %>
+          <a class="btn" href="/admin/products/<%= brainSupport.id %>">View and Edit</a>
+          <div class="divider">
+             <button
+             class="btn btn-alt"
+             data-productid="<%=brainSupport.id %>"
+             data-csrf="<%=locals.csrfToken %>"
+             >
+             Delete
+          </button>
+          <% } else { %>
+             <a class= "btn btn-alt" href="/products/<%= brainSupport.id %>">View Details</a>
+             <% } %>
+          </div>
+       </div>
+    </div>
+ </div>
+</div>
+</li>
+
+
+<li class = "content">
+   <div class = "product-card" >
+       <div class="product-item">
+          <img src="<%= collagenSupport.imageUrl %>" alt="<%= collagenSupport.title %>" class = "product-image" draggable = "false"/>
+          <div class="product-item-content">
+             <h2 class = "product-title"><%= collagenSupport.title %></h2>
+         <div class="product-item-actions">
+            <% if (locals.isAdmin) { %>
+             <a class="btn" href="/admin/products/<%= collagenSupport.id %>">View and Edit</a>
+             <div class="divider">
+                <button
+                class="btn btn-alt"
+                data-productid="<%=collagenSupport.id %>"
+                data-csrf="<%=locals.csrfToken %>"
+                >
+                Delete
+             </button>
+             <% } else { %>
+                <a class= "btn btn-alt" href="/products/<%= collagenSupport.id %>">View Details</a>
+                <% } %>
+             </div>
+          </div>
+       </div>
+    </div>
+   </div>
+   </li>
+
+<li class = "content">
+   <div class = "product-card" >
+       <div class="product-item">
+          <img src="<%= d3.imageUrl %>" alt="<%= d3.title %>" class = "product-image" draggable = "false"/>
+          <div class="product-item-content">
+             <h2 class = "product-title"><%= d3.title %></h2>
+         <div class="product-item-actions">
+            <% if (locals.isAdmin) { %>
+             <a class="btn" href="/admin/products/<%= d3.id %>">View and Edit</a>
+             <div class="divider">
+                <button
+                class="btn btn-alt"
+                data-productid="<%=d3.id %>"
+                data-csrf="<%=locals.csrfToken %>"
+                >
+                Delete
+             </button>
+             <% } else { %>
+                <a class= "btn btn-alt" href="/products/<%= d3.id %>">View Details</a>
+                <% } %>
+             </div>
+          </div>
+       </div>
+    </div>
+   </div>
+   </li>
+
+<li class = "content">
+<div class = "product-card" >
+    <div class="product-item">
+       <img src="<%= fatBurner.imageUrl %>" alt="<%= fatBurner.title %>" class = "product-image" draggable = "false"/>
+       <div class="product-item-content">
+          <h2 class = "product-title"><%= fatBurner.title %></h2>
+      <div class="product-item-actions">
+         <% if (locals.isAdmin) { %>
+          <a class="btn" href="/admin/products/<%= fatBurner.id %>">View and Edit</a>
+          <div class="divider">
+             <button
+             class="btn btn-alt"
+             data-productid="<%=fatBurner.id %>"
+             data-csrf="<%=locals.csrfToken %>"
+             >
+             Delete
+          </button>
+          <% } else { %>
+             <a class= "btn btn-alt" href="/products/<%= fatBurner.id %>">View Details</a>
+             <% } %>
+          </div>
+       </div>
+    </div>
+ </div>
+</div>
+</li>
+
+<li class = "content">
+   <div class = "product-card" >
+       <div class="product-item">
+          <img src="<%= glucosamine.imageUrl %>" alt="<%= glucosamine.title %>" class = "product-image" draggable = "false"/>
+          <div class="product-item-content">
+             <h2 class = "product-title"><%= glucosamine.title %></h2>
+         <div class="product-item-actions">
+            <% if (locals.isAdmin) { %>
+             <a class="btn" href="/admin/products/<%= glucosamine.id %>">View and Edit</a>
+             <div class="divider">
+                <button
+                class="btn btn-alt"
+                data-productid="<%=glucosamine.id %>"
+                data-csrf="<%=locals.csrfToken %>"
+                >
+                Delete
+             </button>
+             <% } else { %>
+                <a class= "btn btn-alt" href="/products/<%= glucosamine.id %>">View Details</a>
+                <% } %>
+             </div>
+          </div>
+       </div>
+    </div>
+   </div>
+   </li>
+   
+
+</ul>
+
+
+
+
+<img src = "/imgs/chevron-left-solid.svg" class="arrows" id="left">
+
+<img src = "/imgs/chevron-right-solid.svg" class = "arrows" id="right">
+
+
+</section>
+
+

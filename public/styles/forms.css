@@ -1,0 +1,60 @@
+form hr {
+    border-color: var(--color-primary-contrast);
+    
+}
+
+label {
+    font-size: 20px;
+    color:var(--color-primary-200);
+    display:block;
+    margin: var(--space-1);
+}
+input, textarea {
+    font:inherit;
+    margin-bottom:1rem;
+    padding: 1px;
+    border-radius: var(--border-radius-small);
+    border: none;
+    width:90%;
+    height:30px;
+}
+
+
+.select-type {
+margin-top: 0.5rem;
+ background-color: var(--color-primary-400);
+ font-size: 20px;
+ color:white;
+ margin-bottom: 1rem;
+  }
+
+#image-upload-control {
+    display:flex;
+    align-items: center;
+
+}
+
+#image-upload-control input {
+    max-width: 15rem;
+
+}
+
+#image-upload-control img {
+    display:none;
+    width: 4rem;
+    height:4rem;
+    object-fit:cover;
+    border-radius: var(--border-radius-small);
+}
+
+#description {
+    width:90%;
+    height:200px;
+    font:inherit;
+    margin-bottom:1rem;
+    padding: 1px;
+    border-radius: var(--border-radius-small);
+}
+
+
+

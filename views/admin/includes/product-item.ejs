@@ -1,0 +1,23 @@
+
+<div class = "admin-product-card">
+    <article class="admin-product-item">
+      <img src="<%= product.imageUrl %>" alt="<%= product.title %>" class = "product-image"/>
+      <div class="admin-product-item-content">
+        <h2 class = "admin-product-title"><%= product.title %></h2>
+        <div class="admin-product-item-actions">
+        
+          <a class="admin-btn" href="/admin/products/<%= product.id %>">View and Edit</a>
+          <div class="divider">
+            <button
+              class="admin-btn admin-btn-alt"
+              data-productid="<%=product.id %>"
+              data-csrf="<%=locals.csrfToken %>"
+            >
+              Delete
+            </button>
+        
+          </div>
+        </div>
+      </div>
+    </article>
+    </div>

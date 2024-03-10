@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:var(--body-font)
+
+}
+
+
+
+h1 {
+    font-size:3rem;
+    text-align:center;
+    color:var(--color-primary-50);
+    margin-bottom:1rem;
+    top:0;
+}
+
+form {
+    min-height:18rem;
+    max-width:30rem;
+    margin:var(--space-2) auto;
+    padding:var(--space-1);
+    background-color: var( --color-primary-bg);
+    border-radius: var(--border-radius-medium);
+    text-align: center;
+    box-shadow:3px 3px  3px rgb(0, 0, 0);
+}
+
+main .btn {
+    width:200px;
+    height:40px;
+    padding: 5px 12px;
+    font-size:20px;
+    margin:1rem;
+    background-color: rgb(44, 73, 117);
+  
+}
+
+
+form a {
+    margin-bottom:1rem;
+    font-size: 20px;
+    color:var(--color-primary-600);
+    
+}
+
+form a:hover,
+form a:active {
+    color: var(--color-primary-400);
+}

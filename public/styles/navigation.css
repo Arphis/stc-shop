@@ -1,0 +1,347 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    /*Colors*/
+  
+    --color-gray-50: rgb(226, 223, 223);
+    --color-gray-100: rgb(133, 133, 133);
+    --color-gray-300: rgb(102, 102, 102);
+    --color-gray-400: rgb(59, 59, 59);
+    --color-gray-500:rgb(46, 44, 44);
+    --color-gray-600:rgb(43, 41, 41);
+    --color-gray-700:rgb(34, 33, 33);
+
+    --color-primary-50: rgb(248, 255, 187);
+    --color-primary-100: rgb(163, 255, 250);
+    --color-primary-200:rgb(114, 203, 241);
+    --color-primary-300:rgb(37, 76, 128);
+    --color-primary-400:rgb(51, 37, 100);
+    --color-primary-contrast:rgb(112, 198, 209);
+    --color-primary-200-contrast:rgb(164, 228, 248);
+
+    --color-white:rgb(245, 245, 245);
+
+    --color-error:rgb(214, 34, 34);
+    --color-error-600:rgb(119, 1, 1);
+
+    --color-primary-bg:rgb(51, 134, 167);
+
+ /*Font and typography===*/
+    --header-font: 'Sansita', sans-serif;
+    --header-font-big:'Bebas Neue', cursive;
+    --body-font-main: 'Signika', sans-serif;
+    --body-font-special:'Nunito', sans-serif;
+
+
+    --large-font-size:1.85rem;
+    --medium-font-size:1.50rem;
+    --smaller-font-size:1.25rem;
+    --small-font-size:1rem;
+
+    --space-1: 0.15rem;
+    --space-2:0.25rem;
+    --space-3: 0.8rem;
+    --space-4:1rem;
+    --space-6:1.5rem;
+    --space-8:2rem;
+
+    --border-radius-small:4px;
+    --border-radius-medium:6px;
+
+    --shadow-medium: 0 2px 8px rgba(0,0,0,0.2);
+}
+@media(max-width:48rem) {
+
+
+
+
+
+    main {
+        margin-top: 6rem;
+        }
+
+    
+    #main-header {
+        position:fixed;/*the content is taken out of document flow*/
+        top:0;
+        left:0;
+        width:100%;
+        max-width: 48rem;
+        height: 6rem;
+        margin: 0 auto;
+        padding:0 var(--space-6);
+        display:flex;
+        justify-content: space-between;/*content is pushed to the left and right edges of the header*/
+        align-items: center;
+        border-bottom: 1px solid var(--color-primary-contrast);
+        background-color: var(--color-gray-600);
+    
+    }
+
+    #main-header nav {
+    display:none;
+    }
+    
+    #main-header nav {
+        display:none;
+    }
+    
+.badge{
+display:none;
+}
+    .nav-items {
+        height:100%;/*so thats how we put the elements vertically, they occupy 100% of the height of surrounding nav element which is 20 rem*/
+        display:flex;
+        align-items:center;
+        flex-direction: column;
+        justify-content: space-around;
+        font-family: var(--header-font-big);
+       font-size:2rem;
+       list-style: none;;
+    }
+    
+    .nav-items li {
+        margin: 0 var(--space-2);
+        align-items:center;
+    }
+    
+    .nav-items button {
+        cursor:pointer;
+        font:inherit;
+    
+        border-radius: var(--border-radius-small);
+        background-color: transparent;
+        padding: var(--space-2) var(--space-4);
+    }
+
+    
+    .description {
+        display:flex;
+    margin-top:10px;
+    font-size:20px;
+       margin-left:5rem;
+       color:white;
+    }
+    #mobile-menu-btn {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        border:none;
+        cursor:pointer;
+        width:2.25rem;
+        height: 2.25rem;
+        background-color: transparent;
+        margin-right: 1rem;
+        padding:0;
+    }
+    #mobile-menu-btn span {
+    
+        width:2.25rem;
+        height: 0.2rem;
+        background-color: var(--color-gray-50);
+    }
+    
+    #mobile-menu {
+        position:fixed;/*overlay, cant scroll away*/
+        top: 6rem;
+        left:0;
+        height:calc(100vh - 5rem);
+        width: 100%;
+        background-color: var(--color-gray-700);
+        display:none;
+        flex-direction:column;
+        align-content: center;
+       
+    
+    }
+    
+    #mobile-menu.open {
+        display:flex;
+    }
+    #mobile-menu nav {
+        height: 20rem;
+        width: 90%;
+        margin:var(--space-4) auto;
+    
+    }
+    
+    #mobile-menu .nav-items a,
+    #mobile-menu .nav-items button {
+    font-size: 1.50rem;
+    color: var(--color-primary-200);
+    
+    }
+    
+    
+    
+
+}    
+
+@media (min-width:48rem) {
+    main {
+        margin-top: 6rem;
+        }
+
+
+        #main-header {
+            position:fixed;/*the content is taken out of document flow*/
+            top:0;
+            left:0;
+            width:150%;
+            max-width: 90rem;
+            height: 6rem;
+            margin: 0 auto;
+            padding:0 var(--space-6);
+            display:flex;
+            justify-content: space-between;/*content is pushed to the left and right edges of the header*/
+            align-items: center;
+            border-bottom: 1px solid var(--color-primary-contrast);
+            background-color: var(--color-gray-600);
+        
+        }
+        #logo-text {
+            font-size: 3.5rem;
+        
+            display:flex;
+          top:0;
+         margin-left:6rem;
+        }
+        
+        
+        #main-header nav {
+        display:none;
+        }
+        
+        #main-header nav {
+            display:none;
+        }
+        
+        
+        .nav-items {
+            height:100%;/*so thats how we put the elements vertically, they occupy 100% of the height of surrounding nav element which is 20 rem*/
+            display:flex;
+            align-items:center;
+            flex-direction: column;
+            justify-content: space-around;
+            font-family: var(--header-font-big);
+           font-size:2rem;
+        }
+        
+        .nav-items li {
+            margin: 0 var(--space-2);
+            align-items:center;
+        }
+        
+        .nav-items button {
+            cursor:pointer;
+            font:inherit;
+        
+            border-radius: var(--border-radius-small);
+            background-color: transparent;
+            padding: var(--space-2) var(--space-4);
+        }
+        
+        .badge {
+            color:var(--color-primary-400)
+        }
+        
+        .description {
+            display:flex;
+        margin-top:5px;
+        font-size:20px;
+           margin-left:5rem;
+        }
+        #mobile-menu-btn {
+            display:flex;
+            flex-direction:column;
+            justify-content:space-around;
+            border:none;
+            cursor:pointer;
+            width:2.25rem;
+            height: 2.25rem;
+            background-color: transparent;
+            margin-right: 3rem;
+            padding:0;
+        }
+        #mobile-menu-btn span {
+        
+            width:2.25rem;
+            height: 0.2rem;
+            background-color: var(--color-gray-50);
+        }
+        
+        #mobile-menu {
+            position:fixed;/*overlay, cant scroll away*/
+            top: 5rem;
+            left:0;
+            height:calc(100vh - 5rem);
+            width: 100%;
+            background-color: var(--color-gray-700);
+            display:none;
+            flex-direction:column;
+            align-items: center;
+        
+        }
+        
+        #mobile-menu.open {
+            display:flex;
+        }
+        #mobile-menu nav {
+            height: 20rem;
+            width: 90%;
+            margin:var(--space-4) auto;
+        
+        }
+        
+        #mobile-menu .nav-items a,
+        #mobile-menu .nav-items button {
+        font-size: 1.50rem;
+        color: var(--color-primary-100);
+        
+        }
+
+
+
+
+#main-header {
+    position:static;
+}
+#main-header nav {
+    display:block;
+}
+.nav-items button {
+    color:var(--color-primary-contrast);
+    border-color: (--color-primary-contrast);
+}
+    #mobile-menu-btn {
+display:none;
+    }
+    #mobile-menu {
+        display:none;
+    }
+.nav-items {
+    flex-direction: row;
+  
+}
+
+.nav-items a {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--border-radius-small);
+}
+
+    .nav-items a:hover,
+    .nav-items a:active {
+        background-color: var(--color-primary-400);
+    }
+}
