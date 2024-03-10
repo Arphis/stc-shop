@@ -6,7 +6,7 @@ function createSessionStore() {
     const MongoDBStore = mongoDbStore(expressSession);//by connecting session with database session we create a constructor function
 
     const store = new MongoDBStore({
-        uri:'mongodb://127.0.0.1:27017/',
+        uri:'mongodb+srv://kirillarphis:PpEafjlKvS7C3LQA@cluster0.rybz8nm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
         databaseName: 'online-shop',
         collection:'sessions'
     });
