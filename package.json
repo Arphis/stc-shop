@@ -9,6 +9,9 @@
   },
   "author": "Kirill",
   "license": "ISC",
+    "bin" : {
+    "execute" :"app.js"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-mongodb-session": "^3.1.1",
