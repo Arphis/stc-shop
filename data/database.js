@@ -3,7 +3,7 @@ const mongodb = require('mongodb');
 
 const MongoClient = mongodb.MongoClient;
  
-let mongoUrl = 'mongodb://127.0.0.1:27017'
+let mongoUrl = 'mongodb+srv://kirillarphis:PpEafjlKvS7C3LQA@cluster0.rybz8nm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 
 if (process.env.MONGODB_URL) {
      mongoUrl = process.env.MONGODB_URL
