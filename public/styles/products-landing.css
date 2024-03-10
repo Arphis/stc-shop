@@ -793,6 +793,11 @@ text-align: center;
         transform: translateY(0px);
     opacity:1;
     }
+
+          .container {
+        scrollbar-width: none;
+    }
+    
     
     ul li {
         display:list-item;
